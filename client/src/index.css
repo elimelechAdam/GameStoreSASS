@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f5;
+  font-size: 14px;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%; /* Make .nav full width */
+    max-width: 1400px; /* Adjust this value to your preference */
+    margin: 0 auto; /* This will center the .nav within the .header */
+
+    img {
+      width: 150px;
+      height: 150px;
+    }
+    .searchBar {
+      display: flex;
+      justify-content: center;
+      height: 40px;
+      width: 50%;
+      input {
+        border: none;
+        width: 100%;
+        border-radius: 3px 0px 0px 3px;
+        padding: 11px 40px 11px 15px;
+        font-size: 14px;
+      }
+      select {
+        width: 50%;
+        border: none;
+        background: rgb(255, 255, 255);
+        display: flex;
+        border-left: 1px solid rgb(224, 224, 224);
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.54);
+        cursor: pointer;
+      }
+      option {
+        width: 170px;
+        height: 40px;
+      }
+      .searchIcon {
+        height: 100%;
+        width: 11%;
+        background-color: #fff;
+        color: #000;
+        border: none;
+        border-radius: 0px 3px 3px 0px;
+        padding: 1px 15px;
+        cursor: pointer;
+      }
+    }
+    .header__user {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+    }
+    .nav__avatar {
+      background-color: #212121;
+      padding: 11px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    span {
+      color: white;
+      font-weight: 600;
+    }
+  }
+
+  .header_categories {
+    max-width: 1300px;
+    margin: 0 auto;
+    li {
+      list-style: none;
+      cursor: pointer;
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-evenly;
+      margin: 0 auto;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        background-color: #212121;
+        width: 20%;
+        padding: 7px;
+        border-radius: 3px 3px 0px 0px;
+        &:hover {
+          background-color: #424242;
+        }
+        &:first-of-type {
+          text-transform: uppercase;
+          font-size: 14px;
+        }
+        svg {
+          margin-right: 5px;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+.section_hero {
+  width: 100%; /* Make .nav full width */
+  max-width: 1200px; /* Adjust this value to your preference */
+  margin: 0 auto;
+  .section_hero_imgs {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    .section_hero_img {
+      width: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+  }
+  .section_hero_tabs {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+    button {
+      background-color: #eaeaea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      min-width: 19%;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      line-height: 18px;
+    }
+  }
+}
+/* Title,Description and grid of 6 games with image and price */
+/* section_games,section__grid,section__game */
+
+.section_games {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+
+  h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #212121;
+  }
+  p {
+    color: #757575;
+  }
+
+  .section__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    .section__game {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      img {
+        width: 130px;
+        min-height: 220px;
+        object-fit: cover;
+      }
+      .section__game_info {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 10px;
+
+        h1 {
+          font-size: 14px;
+          font-weight: 600;
+          color: #212121;
+        }
+        p {
+          color: #212121;
+        }
+        .section_rateprice {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+        .game_platforms_tags {
+          font-size: 12px;
+        }
+        .game_platforms_tags_item {
+          margin: 2px;
+          display: inline-block;
+          padding: 5px 10px;
+          border-radius: 5px;
+          background-color: #eaeaea;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .nav {
+      justify-content: space-between;
+      img {
+        width: 100px; /* Reduce logo size on smaller screens */
+      }
+      .header__user {
+        display: none;
+      }
+    }
+  }
+}
