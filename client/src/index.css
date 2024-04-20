@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -162,8 +161,6 @@ body {
     }
   }
 }
-/* Title,Description and grid of 6 games with image and price */
-/* section_games,section__grid,section__game */
 
 .section_games {
   width: 100%;
@@ -228,6 +225,64 @@ body {
         }
       }
     }
+  }
+}
+
+.gamepage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+
+  img {
+    width: 100%;
+    grid-column: 1 / -1;
+    border-radius: 10px;
+  }
+
+  h1,
+  h2 {
+    color: #333;
+  }
+
+  .gamepage_section {
+    background-color: #eeeeee;
+    padding: 15px;
+    border-radius: 8px;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        padding: 8px 16px;
+        margin: 5px;
+        display: inline-block;
+        background-color: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #ccc;
+        }
+      }
+    }
+  }
+
+  a {
+    color: blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    color: #666;
   }
 }
 

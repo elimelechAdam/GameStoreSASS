@@ -1,5 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from "react-query";
-import { fetchHallOfFameGames } from "./../api/fetch";
+import { fetchHallOfFameGames, findGame } from "./../api/fetch";
 export const useMsgQuerys = () => {
   const queryClient = useQueryClient();
 
@@ -10,7 +10,15 @@ export const useMsgQuerys = () => {
     });
   };
 
+  const findGameQuery = (id) => {
+    return useQuery({
+      queryKey: ["findGame", id],
+      queryFn: () => findGame(id),
+    });
+  };
+
   return {
     fetchGamesQuery,
+    findGameQuery,
   };
 };
